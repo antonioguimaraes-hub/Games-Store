@@ -1,15 +1,98 @@
 @media screen and (min-width: 0) {
+    /*celulares*/
+    .destaques__principal, .destaques__categorias {
+        grid-column: 1 / 5;
+    
+    }
+    .destaques__secundario:nth-child(2) /*nth puxando apenas o segundo filho dos destaques*/ {
+       display: none;
+       grid-column: none;
+       grid-row: none;
+    }
+    .destaques__secundario:nth-child(3){
+        display: none;
+        grid-column: none;
+        grid-row: none;
+     }
+     .destaques__secundario:nth-child(4){
+        display: none;
+        grid-column: none;
+        grid-row: none;
+     }
+     .destaques__secundario:nth-child(5){
+        display: none;
+        grid-column: none;
+        grid-row: none;
+     }
 
+     .populares__card {
+         grid-template-rows: 173px auto;
+         width: 50%;
+         height: 100%;
+         margin-bottom: 3rem;
+         margin-right: 0;
+         padding: 5px;
+     }
 }
+
+ /*------------------------------*/
 
 @media screen and (min-width: 768px) {
+/*tablet*/
+.destaques__principal {
+    grid-column: 1 / 4;
 
 }
+.destaques__secundario:nth-child(2) /*nth puxando apenas o segundo filho dos destaques*/ {
+   display: flex;
+   grid-column: 4 / 4;
+   grid-row: 1 / 1;
+}
+.destaques__secundario:nth-child(3){
+    display: flex;
+    grid-column: 4 / 4;
+    grid-row: 2 / 2;
+ }
+ .destaques__secundario:nth-child(4){
+    display: flex;
+    grid-column: 4 / 4;
+    grid-row: 3 / 3;
+ }
+ .destaques__secundario:nth-child(5){
+    display: flex;
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+ }
+ .destaques__categorias {
+    grid-column: 1 / 3;
+}
+
+.populares__card {
+    grid-template-rows: 173px auto;
+    margin-bottom: 3rem;
+    margin-right: 1rem;
+    width: calc(50% - 1rem);
+}
+}
+
+ /*------------------------------*/
 
 @media screen and (min-width: 992px) {
+/*desktop*/
 
+.populares__card {
+    margin-bottom: 3rem;
+    width: calc(33.33% - 1rem);
+}
 }
 
+ /*------------------------------*/
+
 @media screen and (min-width: 1200px) {
-    
+/*desktop novos e tvs*/
+
+.populares__card {
+    margin-bottom: 0;
+    width: calc(20% - 1rem);
+}
 }
